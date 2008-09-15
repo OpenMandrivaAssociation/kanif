@@ -8,7 +8,6 @@ License:	GPLv2+
 URL:		http://taktuk.gforge.inria.fr/kanif/
 Source:		http://gforge.inria.fr/frs/download.php/3984/kanif-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildArch:	noarch
 %description
 kanif is a tool for cluster management and administration. It combines
 main features of well known cluster management tools such as c3, pdsh
