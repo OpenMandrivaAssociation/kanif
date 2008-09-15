@@ -45,7 +45,7 @@ redirection).
 %{_bindir}/kanif
 %{_bindir}/kaput
 %{_bindir}/kash
-/usr/lib/pkgconfig/kanif.pc
+%{_libdir}/pkgconfig/kanif.pc
 %{_mandir}/man1/kaget.1.*
 %{_mandir}/man1/kanif.1.*
 %{_mandir}/man1/kaput.1.*
