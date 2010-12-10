@@ -1,7 +1,7 @@
 Name:		kanif
 Summary:	TakTuk wrapper for cluster management and administration
 Version:	1.2.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 Requires:	taktuk
 Group:		System/Cluster
 License:	GPLv2+
