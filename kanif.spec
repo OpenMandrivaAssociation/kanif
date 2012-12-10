@@ -51,3 +51,20 @@ redirection).
 %{_mandir}/man1/kaput.1.*
 %{_mandir}/man1/kash.1.*
 %{_mandir}/man5/kanif.conf.5.*
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 1.2.1-4mdv2011.0
++ Revision: 619876
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.2.1-3mdv2010.0
++ Revision: 429658
+- rebuild
+
+* Mon Sep 15 2008 Nicolas Vigier <nvigier@mandriva.com> 1.2.1-2mdv2009.0
++ Revision: 284906
+- bump release
+- import kanif
+
+
