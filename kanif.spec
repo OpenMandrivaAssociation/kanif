@@ -1,13 +1,17 @@
-Name:		kanif
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 Summary:	TakTuk wrapper for cluster management and administration
-Version:	1.2.1
-Release:	%mkrel 4
-Requires:	taktuk
-Group:		System/Cluster
+Name:		kanif
+Version:	1.2.2
+Release:	1
 License:	GPLv2+
-URL:		http://taktuk.gforge.inria.fr/kanif/
-Source:		http://gforge.inria.fr/frs/download.php/3984/kanif-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+Group:		System/Cluster
+Url:		http://taktuk.gforge.inria.fr/kanif/
+Source0:	http://gforge.inria.fr/frs/download.php/3984/kanif-%{version}.tar.gz
+Source10:	%{name}.rpmlintrc
+Requires:	taktuk
+
 %description
 kanif is a tool for cluster management and administration. It combines
 main features of well known cluster management tools such as c3, pdsh
@@ -21,25 +25,7 @@ while still taking advantage of TakTuk characteristics and features
 (adaptivity, scalability, portability, autopropagation and informations
 redirection).
 
-%prep
-%setup -q
-
-%build
-%configure
-%__make
-
-%install
-%{__rm} -Rf %{buildroot}
-%makeinstall
-
-%{__mkdir} tmp_doc
-%{__mv} %{buildroot}%{_datadir}/doc/%{name} install_doc/
-
-%clean
-%{__rm} -Rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc install_doc/*
 %{_bindir}/kaget
 %{_bindir}/kanif
@@ -52,19 +38,18 @@ redirection).
 %{_mandir}/man1/kash.1.*
 %{_mandir}/man5/kanif.conf.5.*
 
+#----------------------------------------------------------------------------
 
-%changelog
-* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 1.2.1-4mdv2011.0
-+ Revision: 619876
-- the mass rebuild of 2010.0 packages
+%prep
+%setup -q
 
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.2.1-3mdv2010.0
-+ Revision: 429658
-- rebuild
+%build
+%configure2_5x
+make
 
-* Mon Sep 15 2008 Nicolas Vigier <nvigier@mandriva.com> 1.2.1-2mdv2009.0
-+ Revision: 284906
-- bump release
-- import kanif
+%install
+%makeinstall_std
 
+mkdir tmp_doc
+mv %{buildroot}%{_datadir}/doc/%{name} install_doc/
 
