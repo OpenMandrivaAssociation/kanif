@@ -4,7 +4,7 @@
 Summary:	TakTuk wrapper for cluster management and administration
 Name:		kanif
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Cluster
 Url:		http://taktuk.gforge.inria.fr/kanif/
