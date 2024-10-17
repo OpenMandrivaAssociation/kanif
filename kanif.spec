@@ -7,7 +7,7 @@ Version:	1.2.2
 Release:	2
 License:	GPLv2+
 Group:		System/Cluster
-Url:		http://taktuk.gforge.inria.fr/kanif/
+Url:		https://taktuk.gforge.inria.fr/kanif/
 Source0:	http://gforge.inria.fr/frs/download.php/3984/kanif-%{version}.tar.gz
 Source10:	%{name}.rpmlintrc
 Requires:	taktuk
