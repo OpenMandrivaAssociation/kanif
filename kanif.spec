@@ -12,6 +12,11 @@ Source0:	http://gforge.inria.fr/frs/download.php/3984/kanif-%{version}.tar.gz
 Source10:	%{name}.rpmlintrc
 Requires:	taktuk
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 kanif is a tool for cluster management and administration. It combines
 main features of well known cluster management tools such as c3, pdsh
